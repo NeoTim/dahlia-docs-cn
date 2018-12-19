@@ -1,4 +1,6 @@
-# Introduction
+# Dahlia
+
+![](.gitbook/assets/dhlia-logo.png)
 
 ## What
 
