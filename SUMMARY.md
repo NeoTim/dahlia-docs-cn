@@ -1,11 +1,7 @@
 # Table of contents
 
-* [关于](introduction/README.md)
-  * [How](introduction/how.md)
-  * [What](introduction/what.md)
-  * [Why](introduction/why.md)
-* [快速上手](getting-started/README.md)
-  * [getting-started](getting-started/getting-started.md)
+* [关于](introduction.md)
+* [快速上手](getting-started.md)
 * [教程](tutorial/README.md)
   * [tutorial](tutorial/tutorial.md)
 * [例子](examples/README.md)

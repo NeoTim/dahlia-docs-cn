@@ -1,9 +1,4 @@
----
-name: 快速上手
-order: 990
----
-
-# getting-started
+# 快速上手
 
 欢迎使用 Dahlia，在本指南，你将花 1 分钟左右，学会使用 Dahlia CLI 构建并运行一个简单的 Dahlia 应用。
 
