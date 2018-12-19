@@ -50,7 +50,6 @@ dh dev
 
 ![](http://forsigner.com/images/dahlia/dahlia-app.png)
 
-
 查看完整代码：
 
 [![Edit dahlia-tutorial-01](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/k570o3p4jo)

@@ -1,5 +1,6 @@
 # store.query
 
-```js
+```javascript
 TODO:
 ```
+

@@ -1,4 +1,4 @@
-### `dh generate`
+# dh generate
 
 Generate page/component/store...
 

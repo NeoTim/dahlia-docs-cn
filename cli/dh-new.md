@@ -1,4 +1,4 @@
-### `dh new`
+# dh new
 
 Create a new Dahlia app
 
@@ -14,3 +14,4 @@ ALIASES
 EXAMPLE
   $ dh new my-app
 ```
+

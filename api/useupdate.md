@@ -1,38 +1,38 @@
-## useUpdate
+# useUpdate
 
-**`const [updateFn, { loading, data, error }] = useUpdate(url, options)`**
+`const [updateFn, { loading, data, error }] = useUpdate(url, options)`
 
-### Params
+## Params
 
-**`url: string`** 请求的 URL。
+`url: string` 请求的 URL。
 
-**`options?: Options`**
+`options?: Options`
 
-- method (String) - HTTP method. 默认: `GET`
-- body (Object, body types) - HTTP request body
-- headers (Object, Headers) - 默认: {}
+* method \(String\) - HTTP method. 默认: `GET`
+* body \(Object, body types\) - HTTP request body
+* headers \(Object, Headers\) - 默认: {}
 
 和 fetch 的异同：TODO:
 
-### Result
+## Result
 
-#### Update function
+### Update function
 
-**`updateFn: (options: Options)`**
+`updateFn: (options: Options)`
 
 一个用来触发 update 的函数，例如：`addTodo({ title: 'one thing'})`。
 
-#### Update result
+### Update result
 
-**`loading: boolean`**
+`loading: boolean`
 
 请求状态，是否成功获取数据，对前端界面状态处理很有用。
 
-**`data: TData`**
+`data: TData`
 
 GraphQL 查询成功返回的数据对象，例如：
 
-```js
+```javascript
 {
   hero: {
     name: 'Cristiano Ronaldo'
@@ -40,11 +40,11 @@ GraphQL 查询成功返回的数据对象，例如：
 }
 ```
 
-**`error: TError`**
+`error: TError`
 
 请求发生错误时，返回的错误信息对象，例如：
 
-```js
+```javascript
 {
   error: {
     statusCode: 401,
@@ -53,3 +53,4 @@ GraphQL 查询成功返回的数据对象，例如：
   }
 }
 ```
+

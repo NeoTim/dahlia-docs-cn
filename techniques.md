@@ -1,4 +1,4 @@
-# Dahlia 技术栈
+# 技术栈
 
 * TypeScript
 * React

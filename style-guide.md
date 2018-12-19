@@ -8,13 +8,12 @@ Dahlia 建议使用 TypeScript 来开发你的项目，**Type safety** 是 Dahli
 
 **Type safety** 也是我创建 Dahlia 的最大初衷之一，如果你使用过 TypeScript 的方式开发 React 项目，不管是搭配 Redux 还是 Mobx，都会有些蹩脚，你很容易会因为要写各种类型定义而变得心情烦躁。
 
-
 ## 目录结构
 
 Dahlia 推荐是如下的目录结构组织项目：
 
-
 // TODO:
+
 ```bash
 .
 ├── package.json
@@ -33,9 +32,7 @@ Dahlia 推荐是如下的目录结构组织项目：
 │       └── counterStore.ts
 ├── tsconfig.json
 └── yarn.lock
-
 ```
-
 
 ## createStore
 
@@ -77,7 +74,8 @@ const count = useStore(S => S.count)
 const { count, step } = useStore(S => ({ count: S.count, step: S.step }))
 ```
 
-## action selector 
+## action selector
+
 使用 action selector 选择所需 dispatch 的 action，用字符串智能提示更弱，而且不能跳转到定义处，使用 action selector 你可以放心的进行代码重构，代码可维护性增加。
 
 ```javascript

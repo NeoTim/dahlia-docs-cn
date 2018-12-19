@@ -1,6 +1,6 @@
+# store.fetch
 
-## store.fetch
-
-```js
+```javascript
 TODO:
 ```
+

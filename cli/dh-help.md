@@ -1,5 +1,4 @@
-
-### `dh help`
+# dh help
 
 ```bash
 CLI tool for Dahlia
@@ -15,3 +14,4 @@ COMMANDS
   help      display help for dahlia
   new       Create a new Dahlia app
 ```
+
