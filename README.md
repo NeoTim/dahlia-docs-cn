@@ -1,4 +1,4 @@
-# Dahlia
+# 关于
 
 ![](.gitbook/assets/dhlia-logo.png)
 

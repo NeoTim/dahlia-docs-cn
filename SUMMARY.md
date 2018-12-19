@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Dahlia](README.md)
+* [关于](README.md)
 * [快速上手](getting-started.md)
 * [教程](tutorial/README.md)
   * [Init](tutorial/init.md)
