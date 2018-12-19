@@ -1,6 +1,5 @@
 # Table of contents
 
-* [关于](introduction.md)
 * [快速上手](getting-started.md)
 * [教程](tutorial/README.md)
   * [Init](tutorial/init.md)
