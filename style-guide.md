@@ -1,9 +1,4 @@
----
-name: 风格
-order: 930
----
-
-# style-guide
+# 风格指南
 
 ## TypeScript
 

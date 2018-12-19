@@ -1,9 +1,4 @@
----
-name: 技术
-order: 920
----
-
-# techniques
+# Dahlia 技术栈
 
 * TypeScript
 * React
