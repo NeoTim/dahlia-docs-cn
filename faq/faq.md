@@ -3,8 +3,7 @@ name: FAQ
 order: 900
 ---
 
-
-# FAQ
+# faq
 
 **Dahlia**
 
@@ -14,10 +13,9 @@ Just another choice...
 
 Yes, it is total type-safety.
 
-
 key typings:
 
-```js
+```javascript
 declare function createStore<T>(state: T): {
     consume<S>(selector: (state: T) => S, renderFn?: ((partialState: S) => React.ReactNode) | undefined): JSX.Element;
     mutate: (fn: (draft: T) => void) => void;
@@ -31,4 +29,5 @@ Personally, I would recommend a multi-part solution. More flexible and less Pote
 
 **Can I use HOCs?**
 
-No, You don't need it at all. Maybe you are used to using a HOC(like connect, inject) in Redux or Mobx, to get some state or action method in lifecycles. In Stamen, You can access state by `getState()` and actions in lifecycles directly.
+No, You don't need it at all. Maybe you are used to using a HOC\(like connect, inject\) in Redux or Mobx, to get some state or action method in lifecycles. In Stamen, You can access state by `getState()` and actions in lifecycles directly.
+

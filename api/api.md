@@ -3,13 +3,13 @@ name: API
 order: 950
 ---
 
-# API
+# api
 
 ## init
 
 用来初始化 Dahlia，推荐在入口文件初始化，这里为什么不使用 Provider 的方式来初始化，因为初始化的配置跟子组件并没有关系，所以没必要，使用 "**Programmatically**" 的方式初始化会更清晰。
 
-```js
+```javascript
 import dahlia from 'dahlia'
 
 dahlia.init({
@@ -24,17 +24,17 @@ dahlia.init({
 
 ## useQuery
 
-**`const { loading, data, error, refetch } = useQuery(query, variables, options)`**
+`const { loading, data, error, refetch } = useQuery(query, variables, options)`
 
 获取服务端数据是一个非常通用的业务场景，这个一个重复而繁杂的工作，`useQuery` 把这个业务逻辑通用化了，通过 `useQuery`，你可以用最简单的方式获取数据，并且可以方便的处理加载状态和错误信息。
 
 ### Params
 
-**`query: string`**
+`query: string`
 
 GraphQL 的 query 字符串，例如：
 
-```js
+```javascript
 {
   hero {
     name
@@ -42,21 +42,21 @@ GraphQL 的 query 字符串，例如：
 }
 ```
 
-**`variables?: {[key: string]: any}`**
+`variables?: {[key: string]: any}`
 
 GraphQL 查询的变量，是一个普通的 JavaScript 对象，例如：
 
-```js
+```javascript
 {
   id: 1000
 }
 ```
 
-**`options?:TODO:`**
+`options?:TODO:`
 
 其他参数，是一个普通的 JavaScript 对象，例如:
 
-```js
+```javascript
 {
   headers: {
     token: '57bb44dd21d2befb7ca3f010'
@@ -66,15 +66,15 @@ GraphQL 查询的变量，是一个普通的 JavaScript 对象，例如：
 
 ### Result
 
-**`loading: boolean`**
+`loading: boolean`
 
 请求状态，是否成功获取数据，对前端界面状态处理很有用。
 
-**`data: TData`**
+`data: TData`
 
 GraphQL 查询成功返回的数据对象，例如：
 
-```js
+```javascript
 {
   hero: {
     name: 'Cristiano Ronaldo'
@@ -82,11 +82,11 @@ GraphQL 查询成功返回的数据对象，例如：
 }
 ```
 
-**`error: TError`**
+`error: TError`
 
 请求发生错误时，返回的错误信息对象，例如：
 
-```js
+```javascript
 {
   error: {
     statusCode: 401,
@@ -96,21 +96,21 @@ GraphQL 查询成功返回的数据对象，例如：
 }
 ```
 
-**`refetch: (variables?: TVariables) => void`**
+`refetch: (variables?: TVariables) => void`
 
 一个函数，可以让你重新发请求获取数据，比如你有一刷新按钮，点击重新获取数据，你就可以用 refetch 了。
 
 ## useMutate
 
-**`const [mutateFn, { loading, data, error }] = useMutate(query)`**
+`const [mutateFn, { loading, data, error }] = useMutate(query)`
 
 ### Params
 
-**`query: string`**
+`query: string`
 
 GraphQL 的 query 字符串，例如：
 
-```js
+```javascript
 {
   hero {
     name
@@ -122,21 +122,21 @@ GraphQL 的 query 字符串，例如：
 
 #### Mutate function:
 
-**`mutateFn: (variables?: Variables)`**
+`mutateFn: (variables?: Variables)`
 
 一个用来触发 mutate 的函数，例如：`addTodo({ title: 'one thing'})`。
 
 #### Mutate result:
 
-**`loading: boolean`**
+`loading: boolean`
 
 请求状态，是否成功获取数据，对前端界面状态处理很有用。
 
-**`data: TData`**
+`data: TData`
 
 GraphQL mutate 成功返回的数据对象，例如：
 
-```js
+```javascript
 {
   hero: {
     name: 'Cristiano Ronaldo'
@@ -144,11 +144,11 @@ GraphQL mutate 成功返回的数据对象，例如：
 }
 ```
 
-**`error: TError`**
+`error: TError`
 
 请求发生错误时，返回的错误信息对象，例如：
 
-```js
+```javascript
 {
   error: {
     statusCode: 401,
@@ -160,33 +160,33 @@ GraphQL mutate 成功返回的数据对象，例如：
 
 ## useFetch
 
-**`const { loading, data, error, refetch } = useFetch(url, options)`**
+`const { loading, data, error, refetch } = useFetch(url, options)`
 
 获取服务端数据是一个非常通用的业务场景，这个一个重复而繁杂的工作，`useQuery` 把这个业务逻辑通用化了，通过 `useQuery`，你可以用最简单的方式获取数据，并且可以方便的处理加载状态和错误信息。
 
 ### Params
 
-**`url: string`** 请求的 URL。
+`url: string` 请求的 URL。
 
-**`options?: TOptions`**
+`options?: TOptions`
 
-- method (String) - HTTP method. 默认: `GET`
-- body (Object, body types) - HTTP request body
-- headers (Object, Headers) - 默认: {}
+* method \(String\) - HTTP method. 默认: `GET`
+* body \(Object, body types\) - HTTP request body
+* headers \(Object, Headers\) - 默认: {}
 
 和 fetch 的异同：TODO:
 
 ### Result
 
-**`loading: boolean`**
+`loading: boolean`
 
 请求状态，是否成功获取数据，对前端界面状态处理很有用。
 
-**`data: TData`**
+`data: TData`
 
 GraphQL 查询成功返回的数据对象，例如：
 
-```js
+```javascript
 {
   hero: {
     name: 'Cristiano Ronaldo'
@@ -194,11 +194,11 @@ GraphQL 查询成功返回的数据对象，例如：
 }
 ```
 
-**`error: TError`**
+`error: TError`
 
 请求发生错误时，返回的错误信息对象，例如：
 
-```js
+```javascript
 {
   error: {
     statusCode: 401,
@@ -208,23 +208,23 @@ GraphQL 查询成功返回的数据对象，例如：
 }
 ```
 
-**`refetch: (variables?: TVariables) => void`**
+`refetch: (variables?: TVariables) => void`
 
 一个函数，可以让你重新发请求获取数据，比如你有一刷新按钮，点击重新获取数据，你就可以用 refetch 了。
 
 ## useUpdate
 
-**`const [updateFn, { loading, data, error }] = useUpdate(url, options)`**
+`const [updateFn, { loading, data, error }] = useUpdate(url, options)`
 
 ### Params
 
-**`url: string`** 请求的 URL。
+`url: string` 请求的 URL。
 
-**`options?: Options`**
+`options?: Options`
 
-- method (String) - HTTP method. 默认: `GET`
-- body (Object, body types) - HTTP request body
-- headers (Object, Headers) - 默认: {}
+* method \(String\) - HTTP method. 默认: `GET`
+* body \(Object, body types\) - HTTP request body
+* headers \(Object, Headers\) - 默认: {}
 
 和 fetch 的异同：TODO:
 
@@ -232,21 +232,21 @@ GraphQL 查询成功返回的数据对象，例如：
 
 #### Update function
 
-**`updateFn: (options: Options)`**
+`updateFn: (options: Options)`
 
 一个用来触发 update 的函数，例如：`addTodo({ title: 'one thing'})`。
 
 #### Update result
 
-**`loading: boolean`**
+`loading: boolean`
 
 请求状态，是否成功获取数据，对前端界面状态处理很有用。
 
-**`data: TData`**
+`data: TData`
 
 GraphQL 查询成功返回的数据对象，例如：
 
-```js
+```javascript
 {
   hero: {
     name: 'Cristiano Ronaldo'
@@ -254,11 +254,11 @@ GraphQL 查询成功返回的数据对象，例如：
 }
 ```
 
-**`error: TError`**
+`error: TError`
 
 请求发生错误时，返回的错误信息对象，例如：
 
-```js
+```javascript
 {
   error: {
     statusCode: 401,
@@ -270,7 +270,7 @@ GraphQL 查询成功返回的数据对象，例如：
 
 ## createStore
 
-```js
+```javascript
 const { useStore, dispatch, query, fetch } = createStore({
   state: {},
   reducers: {},
@@ -278,11 +278,11 @@ const { useStore, dispatch, query, fetch } = createStore({
 })
 ```
 
-**`state:any`**
+`state:any`
 
 初始化的 state，建议给 state 定义类型，当然这不是必须的，不定义类型会自动推倒出 state 的类型。
 
-```ts
+```typescript
 interface State {
   count: number
   step?: number
@@ -292,11 +292,11 @@ const initialState: State = { count: 0 } as State
 const someStore = createStore({ state: initialState })
 ```
 
-**`reducers: { [string]: (state, payload) => any }`**
+`reducers: { [string]: (state, payload) => any }`
 
 Dahalia 中有两种类型的 action：reducer 和 effect，你只能通过 reducers 里面的 action 更新 state，如果是要在 action 中进行副作用操作，请使用 effects。
 
-```js
+```javascript
 const someStore = createStore({
   reducers: {
     increment(state, step) {
@@ -306,11 +306,11 @@ const someStore = createStore({
 })
 ```
 
-**`effects: { [string]: (payload) => any }`**
+`effects: { [string]: (payload) => any }`
 
 如果是要在 action 中进行副作用操作，请使用 effects，比如异步网络请求、定时器等。需要改变 state，你需要 dispatch 一个 action 。
 
-```js
+```javascript
 const { dispatch } = createStore({
   effects: {
     async asyncIncrement() {
@@ -329,7 +329,7 @@ const { dispatch } = createStore({
 
 使用 React hooks 的方式获取 state，为了获得更好的性能，尽量减少 re-render，需要使用 state selector，例如：`S => S.count`、`S => S`。使用 React hooks，你不要写任何 TypeScript type 就可以得到完整的智能提示。
 
-```js
+```javascript
 const App = () => {
   const { useStore } = counterStore
   const count = useStore(S => S.count)
@@ -339,9 +339,9 @@ const App = () => {
 
 ## store.dispatch
 
-Dispatch 一个 action 用来更新 state，`dispatch` 接受一个 action selector(类似 state selector)，而不是 Redux 使用的字符串标量，这样的好处是：智能提示、精确的跳转到定义，可以有更好的开发体验和代码可维护性。
+Dispatch 一个 action 用来更新 state，`dispatch` 接受一个 action selector\(类似 state selector\)，而不是 Redux 使用的字符串标量，这样的好处是：智能提示、精确的跳转到定义，可以有更好的开发体验和代码可维护性。
 
-```js
+```javascript
 const App = () => {
   const { dispatch } = counterStore
   return <button onClick={() => dispatch(A => A.decrement)}>-</button>
@@ -350,12 +350,13 @@ const App = () => {
 
 ## store.query
 
-```js
+```javascript
 TODO:
 ```
 
 ## store.fetch
 
-```js
+```javascript
 TODO:
 ```
+

@@ -3,27 +3,27 @@ name: 进阶
 order: 960
 ---
 
-# 进阶
+# advanced
 
-## 获取数据(raphql)
+## 获取数据\(raphql\)
 
-## 获取数据(Rest)
+## 获取数据\(Rest\)
 
 ## 状态管理
 
-<img src="http://forsigner.com/images/dahlia/dahlia-stamen.svg" width="900" />
+![](http://forsigner.com/images/dahlia/dahlia-stamen.svg)
 
 随着应用的复杂度上升，你需要一个状态管理工具统一组织和管理应用的各种状态，Dahlia 内置了状态管理工具，不需要再 Redux 或者 MobX 等状态管理工具。为什么不直接使用 Redux 或者 MobX 呢？最大的原因是它们对 TypeScript 的支持不够完美，其次是他们不支持 React Hooks。
 
 让我们来看看怎么使用 Dahlia 进行状态管理，下面这段代码几乎涵盖了 Dahlia 状态管理的所有用法：
 
-- `createStore` —— 如何定义一个 store？
-- `reducers` —— 如何使用同步 action？
-- `effects` —— 如何使用异步 action？
-- `useStore` —— 如何读取 store 里的 state？
-- `dispatch` —— 如何触发一个 action？
+* `createStore` —— 如何定义一个 store？
+* `reducers` —— 如何使用同步 action？
+* `effects` —— 如何使用异步 action？
+* `useStore` —— 如何读取 store 里的 state？
+* `dispatch` —— 如何触发一个 action？
 
-```js
+```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { createStore } from 'stamen'
@@ -73,7 +73,7 @@ ReactDOM.render(<App />, document.getElementById('root'))
 
 ## dispatch
 
-## 副作用(Effects)
+## 副作用\(Effects\)
 
 ## 选择器
 
@@ -82,3 +82,4 @@ ReactDOM.render(<App />, document.getElementById('root'))
 ## 缓存
 
 Coming..
+

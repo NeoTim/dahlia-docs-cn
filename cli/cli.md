@@ -3,19 +3,19 @@ name: CLI
 order: 950
 ---
 
-# Dahlia CLI
+# cli
 
 > CLI tool for Dahlia
 
 ## Installation
 
-```sh-session
+```text
 $ yarn install -g dahlia-cli
 ```
 
 ## Usage
 
-```sh-session
+```text
 $ yarn global add dahlia-cli
 $ dh new my-app
 $ cd my-app
@@ -75,3 +75,4 @@ EXAMPLES
   $ dh generate component Header
   $ dh generate store todoStore
 ```
+

@@ -3,7 +3,7 @@ name: 快速上手
 order: 990
 ---
 
-# 快速上手
+# getting-started
 
 欢迎使用 Dahlia，在本指南，你将花 1 分钟左右，学会使用 Dahlia CLI 构建并运行一个简单的 Dahlia 应用。
 
@@ -53,6 +53,7 @@ dh dev
 
 启动成功后，然后访问浏览器：
 
-<img src="http://forsigner.com/images/dahlia/dahlia-app.png" width="900" />
+![](http://forsigner.com/images/dahlia/dahlia-app.png)
 
 至此，你已经完成了 Dahlia 的基本体验。
+

@@ -1,4 +1,4 @@
-## How
+# How
 
 Dahlia 是一个 **"Opinionated"** 的框架，重度使用 Typescript、React Hooks、GraphQL 等技术。
 
@@ -9,3 +9,4 @@ Dahlia 是一个 **"Opinionated"** 的框架，重度使用 Typescript、React H
 Dahlia 会深度使用 React Hooks、Functional Components，不推荐使用 Class Components，因为使用 React Hooks 和 Functional Components 更容易写出为可维护性高的代码。
 
 Dahlia 使用 GraphQL 和服务端进行数据交互，GraphQL 比 Restful 更加高效和灵活，强烈推荐使用 GraphQL，当然 Dahlia 也支持 Restful。
+

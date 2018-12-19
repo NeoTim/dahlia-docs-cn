@@ -3,7 +3,7 @@ name: 风格
 order: 930
 ---
 
-# 风格指南
+# style-guide
 
 ## TypeScript
 
@@ -15,7 +15,7 @@ order: 930
 
 把 store 的分拆成属性导出，同时保留默认导出，这样你在组件内使用 store 时会更加优雅和灵活。
 
-```js
+```javascript
 // bad
 import { createStore } from 'dahlia'
 const counterStore = createStore({
@@ -25,7 +25,7 @@ const counterStore = createStore({
 export default counterStore
 ```
 
-```js
+```javascript
 // good
 import { createStore } from 'dahlia'
 
@@ -40,12 +40,12 @@ export default { useStore, dispatch }
 
 使用 state selector 选择所需的 state，可以减少重复渲染的可能，提高组件的性能。
 
-```js
+```javascript
 // bad
 const state = useStore(S => S)
 ```
 
-```js
+```javascript
 // good
 const count = useStore(S => S.count)
 const { count, step } = useStore(S => ({ count: S.count, step: S.step }))
@@ -55,12 +55,12 @@ const { count, step } = useStore(S => ({ count: S.count, step: S.step }))
 
 使用 action selector 选择所需 dispatch 的 action，用字符串智能提示更弱，而且不能跳转到定义处，使用 action selector 你可以放心的进行代码重构，代码可维护性增加。
 
-```js
+```javascript
 // bad
 dispatch('increment')
 ```
 
-```js
+```javascript
 // good
 dispatch(A => A.increment)
 ```
@@ -69,7 +69,7 @@ dispatch(A => A.increment)
 
 为 GraphQL 查询命名，方便工具自动生成 typings。
 
-```js
+```javascript
 // bad
 
 // bad
@@ -82,7 +82,7 @@ const GET_HERO = gql`
 `
 ```
 
-```js
+```javascript
 // good
 const GET_HERO = gql`
   query Hero {
@@ -93,12 +93,11 @@ const GET_HERO = gql`
 `
 ```
 
-
 ## useQuery·useMutate
 
 分离 GraphQL query 字符串，把他们放在一个单独的文件个好习惯。
 
-```js
+```javascript
 // bad
 const { loading, data, error } = useQuery(`
   {
@@ -109,7 +108,7 @@ const { loading, data, error } = useQuery(`
 `)
 ```
 
-```js
+```javascript
 // good
 const GET_HERO = gql`
   query Hero {
@@ -121,3 +120,4 @@ const GET_HERO = gql`
 
 const { loading, data, error } = useQuery(GET_HERO)
 ```
+
