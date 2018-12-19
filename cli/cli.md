@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 name: CLI
 order: 950
@@ -22,6 +23,8 @@ $ cd my-app
 $ dh dev
 ```
 
+=======
+>>>>>>> add api files
 ## Commands
 
 ### `dh help`
