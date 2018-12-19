@@ -17,5 +17,44 @@ dh dev
 
 启动成功后，在浏览器中你可以预览应用的运行效果，代码和运行效果如下：
 
-[https://codesandbox.io/embed/k570o3p4jo](https://codesandbox.io/embed/k570o3p4jo)
+{% code-tabs %}
+{% code-tabs-item title="index.ts" %}
+```text
+import Dahlia from 'dahlia'
+import { routes } from './routes'
+
+Dahlia.bootstrap({
+  routes,
+  selector: '#root',
+})
+
+```
+{% endcode-tabs-item %}
+
+{% code-tabs-item title="routes.ts" %}
+```
+import { Routes } from 'dahlia'
+import { Home } from './pages/Home'
+
+export const routes: Routes = [
+  {
+    path: '/',
+    component: Home,
+  },
+]
+
+```
+{% endcode-tabs-item %}
+
+{% code-tabs-item title="Home.tsx" %}
+```
+import React from 'react'
+
+export const Home = () => <div>Hi, Dahlia</div>
+
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+
 
