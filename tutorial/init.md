@@ -1,9 +1,6 @@
 # Init
 
-  
-  
-  
-如果你没有安装 Dahlia CLI，请看 [安装 Dahlia CLI](https://github.com/forsigner/dahlia-docs/tree/a642eb4ce505b4ada4123290ab6f37ef3da03bad/docs-getting-started/README.md#-第一步-安装-dahlia-cli)。
+如果你没有安装 Dahlia CLI，请看 [安装 Dahlia CLI](getting-started#di-yi-bu-an-zhuang-dahlia-cli)。
 
 使用 Dahlia CLI 初始化应用:
 
@@ -22,6 +19,7 @@ dh dev
 
 {% code-tabs %}
 {% code-tabs-item title="index.ts" %}
+
 ```typescript
 import Dahlia from 'dahlia'
 import { routes } from './routes'
@@ -30,11 +28,12 @@ Dahlia.bootstrap({
   routes,
   selector: '#root',
 })
-
 ```
+
 {% endcode-tabs-item %}
 
 {% code-tabs-item title="routes.ts" %}
+
 ```typescript
 import { Routes } from 'dahlia'
 import { Home } from './pages/Home'
@@ -45,19 +44,23 @@ export const routes: Routes = [
     component: Home,
   },
 ]
-
 ```
+
 {% endcode-tabs-item %}
 
 {% code-tabs-item title="Home.tsx" %}
+
 ```typescript
 import React from 'react'
 
 export const Home = () => <div>Hi, Dahlia</div>
-
 ```
+
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+查看完整代码：
+
+[![Edit dahlia-tutorial-01](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/k570o3p4jo)
 
 
