@@ -6,7 +6,7 @@
 
 核心 Api 是 `createForm`，然后使用 `handleSubmit` 、`handleChange`、`handleBlur` 来控制表单。
 
-```tsx
+```jsx
 import React from 'react'
 import { createForm } from 'dahlia/form'
 

@@ -6,7 +6,7 @@
 
 核心 Api 是 `createForm`，然后使用 ref 关联你表单。
 
-```tsx
+```jsx
 import React from 'react'
 import { createForm } from 'dahlia/form'
 
