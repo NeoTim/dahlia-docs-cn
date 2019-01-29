@@ -12,10 +12,16 @@ Dahlia 表单分为**受控表单(controlled form)**和**非受控表单(uncontr
 
 | Element                   | 触发受控的 property  |
 | ------------------------- | -------------------- |
-| <input type="text" />     | value="string"       |
-| <input type="checkbox" /> | checked={boolean}    |
-| <input type="radio" />    | checked={boolean}    |
-| <textarea />              | value="string"       |
-| <select />                | value="option value" |
+| `<input type="text" />`     | value="string"       |
+| `<input type="checkbox" />` | checked={boolean}    |
+| `<input type="radio" />`    | checked={boolean}    |
+| `<textarea />`              | value="string"       |
+| `<select />`                | value="option value" |
 
 
+
+
+## 如何选择
+
+
+TODO: 
