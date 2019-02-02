@@ -2,7 +2,6 @@
 
 你可以直接在组件中导入(import) CSS 文件：
 
-
 **`button.css`**
 
 ```css
@@ -14,17 +13,11 @@
 **`Button.js`**
 
 ```jsx
-import React, { Component } from 'react';
-import './button.css'; // Tell Webpack that Button.js uses these styles
+import React from 'react'
+import './button.css'
 
-class Button extends Component {
-  render() {
-    // You can use them as regular CSS styles
-    return <div className="button" />;
-  }
-}
+const Button = () => <button className="button">Click</button>
 ```
-
 
 在开发环境中，为了能够让 CSS hot reload，CSS 会直接打到 JS 中。
 
