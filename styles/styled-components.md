@@ -1,63 +1,41 @@
-# 表单校验
+# 使用 styled-components
 
-Dahlia 的表单校验非常简单，并且具有非常强的扩展性。
+[styled-components](https://github.com/styled-components/styled-components) 是最优秀的 CSS in JS 解决方案之一，在 `Dahlia` 中使用非常简单。
 
-## 用法
+首先，安装 `styled-components`
+
+```bash
+yarn add styled-components
+```
+
+快速使用：
 
 ```jsx
 import React from 'react'
-import { createForm, required, min } from 'dahlia/form'
+import styled from 'styled-components'
 
-const basicForm = createForm({
-  initialValues: {
-    email: 'foo@bar.com',
-    password: '',
-  },
-+  validator: {
-+    email: [required('require email'), min(6, 'email too short')],
-+    password: [required('need password'), min(6, 'password too short')],
-+  },
-  onSubmit: async (values, { setSubmitting }) => {
-    alert(JSON.stringify(values, null, 2))
-    setSubmitting(false)
-  },
-})
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`
 
-export const Home = () => {
-  const { submitting } = basicForm.useForm()
+const Wrapper = styled.section`
+  padding: 4em;
+  background: papayawhip;
+`
 
-  return (
-    <form ref={basicForm.useRef()}>
-      <input name="email" type="text" />
-      <input name="password" type="text" />
-      <button type="submit" disabled={submitting}>
-        submit
-      </button>
-    </form>
-  )
-}
+export const App = () => (
+  <Wrapper>
+    <Title>Hello World!</Title>
+  </Wrapper>
+)
 ```
 
-## 自定义校验器
+为了更好的调试体验，`Dahlia` 默认集成了 [babel-plugin-styled-components](https://github.com/styled-components/babel-plugin-styled-components)，集体用法看：[babel-plugin](https://www.styled-components.com/docs/tooling#babel-plugin)。
 
-实现一个 url 校验器:
+详细文档: [https://github.com/styled-components/styled-components](styled-components)
 
-```js
-import isUrl from 'util-is-url'
+对于 VSCode 用户，为了能有良好的开发体验，推荐按相关 VSCode 插件：
 
-// an url validtor
-const url = (message?: string) => (value: any) => {
-  if (isUrl(value)) return { ok: true }
-  return { ok: false, message: message || '' }
-}
-```
-
-使用：
-
-```jsx
-const basicForm = createForm({
-  validator: {
-    url: [url('should be a valid url ')],
-  },
-})
-```
+- [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components) - 用于语法高亮
