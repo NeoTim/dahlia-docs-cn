@@ -14,7 +14,7 @@
 
 ```jsx
 import React from 'react'
-import styles from './Button.module.css'
+import styles from './button.module.css'
 
 const Button = () => <button className={styles.error}>Error Button</button>
 ```
